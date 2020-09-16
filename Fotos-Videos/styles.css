@@ -1,0 +1,430 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Oswald',sans-serif;
+  background: url('\/img/poto.jpg')no-repeat center/cover;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul{
+  list-style:none;
+}
+
+/* Logo */
+
+.logo{
+  width: 150px;
+}
+
+/* Logo End */
+
+/* Navegacion */
+
+.contenedor{
+  margin: auto;
+  width: 90%;
+}
+
+.navegacion{
+  margin-top: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0px;
+}
+
+.navegacion ul{
+  display: flex;
+}
+
+.navegacion ul li{
+  padding: 10px;
+}
+
+.navegacion ul li a{
+  padding: 6px;
+}
+
+.navegacion ul li a:hover{
+  border-bottom: 2px solid #ffffff;
+}
+
+.navegacion ul.search{
+  padding-right: 30px;
+}
+
+.navegacion ul.nav-menu{
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* Navegacion End */
+
+hr{
+  margin: 10px 0px;
+}
+
+.banner-end-hr{
+  opacity: .5;
+  background: #000000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: 2px solid purple;
+}
+
+
+/* Extras */
+
+.Extras{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 25px;
+  margin: 10px 0px;
+}
+
+.Extras img{
+  width: 100%;
+  height: 180px;
+}
+
+.Extras h3{
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.Extras a{
+  padding: 10px 0px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.Extras a:hover{
+  text-decoration: underline;
+}
+
+/* Extras End */
+
+/* Banners */
+
+.Banner-uno{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Banner-uno .content{
+  width:100%;
+  text-align: center;
+  color: #ffffff
+}
+
+.Banner-dos p,
+.Banner-dos h2{
+  margin: 10px 0 20px 0;
+}
+
+.Banner-dos{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Banner-dos .content{
+  width:100%;
+  text-align: center;
+  color: #ffffff
+}
+
+.Banner-dos p,
+.Banner-dos h2{
+  margin: 10px 0 20px 0;
+}
+
+/* Banners End */
+
+/* Social */
+
+.social{
+  margin: 20px 50px;
+}
+
+.social p{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a{
+  margin: 0 30px;
+}
+
+.links a i{
+  font-size: 3rem;
+}
+
+/* Social End */
+
+/* Footer */
+
+.footer-link{
+  background: #2f3640;
+  opacity: .9;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 20px 0px;
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 6px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-content ul{
+  margin: 0px auto;
+}
+
+.footer-content ul li {
+  line-height: 2.0;
+}
+
+footer{
+  color: #ffff2f;
+  font-size: 12px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Footer End */
+
+/* Navegacion menu */
+
+.menu-bar{
+  position: absolute;
+  cursor: pointer;
+  top: 23px;
+  right: 30px;
+  z-index: 2;
+  display: none;
+}
+
+/* Navegacion menu End */
+
+/* Modal */
+
+.contenedor-modal{
+  display: inline-block;
+}
+
+.contenedor-modal.activo{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  font-size: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-modal.activo img{
+  padding-right: 50px;
+  width: 70%;
+  height: 90%;
+  z-index: 3;
+}
+
+.contenedor-modal.activo h3{
+  font-size: 0px;
+  z-index: 3;
+}
+
+.contenedor-modal.activo::after{
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.56);
+  z-index: 2;
+}
+
+.contenedor-modal{
+  z-index: 1;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+
+  .navegacion ul.nav-menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+    left: 0;
+    background: #000000;
+    height: 120%;
+    transform: translateX(-200px);
+    transition: transform .5s ease-in-out;
+    opacity: .65;
+  }
+
+  .menu-bar{
+    display:block;
+  }
+
+  .navegacion ul.nav-menu.show{
+    transform: translateX(-20px);
+  }
+
+  .search{
+    margin-right: 40px;
+  }
+
+  .Extras{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    margin: 8px 0px;
+  }
+
+  .Extras img{
+    width: 100%;
+    height: 300px;
+  }
+
+  .Extras h3{
+    font-size: 25px;
+    margin: 8px 0px;
+  }
+
+  .Banner-uno .content{
+    width:100%;
+    text-align: center;
+    color: #ffffff
+  }
+
+  .Banner-dos .content{
+    width:100%;
+    text-align: center;
+    color: #ffffff
+  }
+
+  .video1{
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ffffff;
+  }
+
+  .video2{
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ffffff;
+  }
+
+  .footer-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 6px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+}
+
+/* Tablet End */
+
+/* Movil */
+
+@media (max-width: 500px) {
+
+  .navegacion ul.nav-menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+    left: 0;
+    background: #000000;
+    height: 120%;
+    transform: translateX(-200px);
+    transition: transform .5s ease-in-out;
+    opacity: .6;
+  }
+
+  .menu-bar{
+    display:block;
+  }
+
+  .navegacion ul.nav-menu.show{
+    transform: translateX(-20px);
+  }
+
+  .search{
+    margin-right: 40px;
+  }
+
+  .Extras{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 15px;
+    margin: 10px 0px;
+  }
+
+  .Banner-uno .content{
+    width:100%;
+    text-align: center;
+    color: #ffffff
+  }
+
+  .Banner-dos .content{
+    width:100%;
+    text-align: center;
+    color: #ffffff
+  }
+
+  .video1{
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ffffff;
+  }
+
+  .video2{
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ffffff;
+  }
+
+  .footer-content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 6px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+}
+
+/* Movil End */
