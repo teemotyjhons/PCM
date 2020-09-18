@@ -1,3 +1,8 @@
 # PCM
- ![alt text](https://raw.githubusercontent.com/teemotyjhons/PCM/branch/path/to/img.png)
-Creado por Yeremy Sojo 2020
+![](./screenshot.png)
+
+# Recomendations
+* Minimiza el tamaño de las imagenes
+* Colocamos un Favicon
+
+# Creado por Yeremy Sojo 2020
